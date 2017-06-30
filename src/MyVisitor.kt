@@ -11,7 +11,7 @@ class MyVisitor(val path: Path, var body: String = ""): SimpleFileVisitor<Path>(
     override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
         val relativePath = root.toURI().relativize(file?.toUri()).toString()
         if (relativePath.contains(".pde")) {
-            body += """<p style="background: lightgray;">${createCode(file?.toFile())}</p>"""
+            body += """<pre class="prettyprint style="background: lightgray;">${createCode(file?.toFile())}</pre>"""
             body += """<canvas data-processing-sources="$relativePath"></canvas>"""
         }
         return super.visitFile(file, attrs)

@@ -15,10 +15,8 @@ fun createHtml(body: String): String =
         <html>
         <head>
             <meta charset="utf-8">
-            <title>Processing Demo</title>
+            <title>Processing Submitted List</title>
             <script src="./processing.js"></script>
+            <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
         </head>
-        <body>
-            $body
-        </body>
-        </html>"""
+        <body>$body</body></html>"""
